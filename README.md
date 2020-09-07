@@ -1,4 +1,4 @@
-# JavaFX Medical Center Management System
+# JavaFX - Medical Center Management System
 
 The drawback of the existing system is that it is very difficult to retrieve data from case files. It is difficult to handle the whole system manually and it is less accurate and to keep the data in case files for future reference because it may get destroyed. Moreover, it is very difficult to retrieve data. Redundancy of data may occur and this may lead to the inconsistency. The manual system is so time-consuming.
 
