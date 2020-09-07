@@ -1,0 +1,4 @@
+.root{
+    -fx-background-image:url('../Image/darkImage.jpg') ;
+    -fx-background-size: cover;
+}

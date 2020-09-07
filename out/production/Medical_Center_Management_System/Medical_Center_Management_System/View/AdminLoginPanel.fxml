@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="650.0" prefWidth="1200.0" stylesheets="@../CssFiles/AdminLoginStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Medical_Center_Management_System.Controller.AdminLogin_Controller">
+   <children>
+      <ImageView fitHeight="474.0" fitWidth="375.0" layoutX="774.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/ShapeBox.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="884.0" layoutY="195.0" text="Login Here" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="876.0" layoutY="240.0" prefHeight="26.0" prefWidth="214.0" text="Admin Login Panel" textFill="WHITE">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtUsername" labelFloat="true" layoutX="890.0" layoutY="397.0" prefHeight="25.0" prefWidth="200.0" promptText="Username" style="-fx-prompt-text-fill: white;" unFocusColor="WHITE" />
+      <JFXPasswordField fx:id="txtPassword" labelFloat="true" layoutX="890.0" layoutY="482.0" prefHeight="25.0" prefWidth="200.0" promptText="Password" style="-fx-prompt-text-fill: white;" unFocusColor="WHITE" />
+      <FontAwesomeIconView fill="WHITE" glyphName="LOCK" layoutX="937.0" layoutY="351.0" size="75" />
+      <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="852.0" layoutY="420.0" size="30" />
+      <FontAwesomeIconView fill="WHITE" glyphName="KEY" layoutX="850.0" layoutY="503.0" size="25" />
+      <JFXButton fx:id="btnSignin" buttonType="RAISED" layoutX="1024.0" layoutY="560.0" onMouseClicked="#handleButtonAction" prefHeight="30.0" prefWidth="66.0" ripplerFill="#104171" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" text="Login" textFill="#104171">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Label fx:id="lblErrors" layoutX="890.0" layoutY="517.0" prefHeight="17.0" prefWidth="200.0" textFill="RED">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="CloseButton" fitHeight="25.0" fitWidth="25.0" layoutX="1174.0" layoutY="2.0" onMouseClicked="#ClickClose" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/CloseIcon.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnBack" buttonType="RAISED" layoutX="950.0" layoutY="560.0" onMouseClicked="#BackButton" prefHeight="30.0" prefWidth="66.0" ripplerFill="#104171" style="-fx-background-color: #ffffff; -fx-background-radius: 10;" text="Back" textFill="#104171">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

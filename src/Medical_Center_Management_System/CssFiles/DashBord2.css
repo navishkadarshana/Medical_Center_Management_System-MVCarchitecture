@@ -1,0 +1,11 @@
+.head-background{
+    -fx-background-color:linear-gradient(to left, #3aaff1, #3257B3);
+}
+.side-background{
+    -fx-background-color:linear-gradient(to left, #ffffff, #4169E1);
+}
+
+.head2-background{
+    -fx-background-color:linear-gradient(to left, #3257B3, #000080);
+}
+

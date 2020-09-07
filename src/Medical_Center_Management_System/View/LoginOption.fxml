@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="450.0" prefWidth="750.0" stylesheets="@../CssFiles/OptionStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Medical_Center_Management_System.Controller.LoginOption_Controller">
+   <children>
+      <AnchorPane prefHeight="88.0" prefWidth="750.0" style="-fx-background-color: #104171;">
+         <children>
+            <Label layoutX="97.0" layoutY="30.0" prefHeight="58.0" prefWidth="625.0" text="Medical Center Management System" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="33.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="CloseButton" fitHeight="25.0" fitWidth="25.0" layoutX="724.0" layoutY="2.0" onMouseClicked="#CloseButton" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/CloseIcon.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="182.0" fitWidth="317.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/logo.png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="198.0" prefWidth="242.0" />
+      <Label layoutX="317.0" layoutY="139.0" text="LOGIN AS">
+         <font>
+            <Font name="Impact" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="204.0" fitWidth="179.0" layoutX="121.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/admin.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="198.0" fitWidth="179.0" layoutX="415.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/Reseption.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="adminButton" layoutX="158.0" layoutY="382.0" mnemonicParsing="false" onAction="#aButtonClik" prefHeight="39.0" prefWidth="105.0" style="-fx-background-radius: 10;" stylesheets="@../CssFiles/ButtonStyle.css" text="Admin" textFill="#104171">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="receptionistButton" layoutX="452.0" layoutY="382.0" mnemonicParsing="false" onAction="#rButtonClik" prefHeight="39.0" prefWidth="118.0" style="-fx-background-radius: 10;" stylesheets="@../CssFiles/ButtonStyle.css" text="Receptionist" textFill="#104171">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

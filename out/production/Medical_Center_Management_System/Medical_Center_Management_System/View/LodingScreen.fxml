@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@../CssFiles/LodingStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Medical_Center_Management_System.Controller.LodingScreen_Controller">
+   <children>
+      <Label fx:id="progress" layoutX="386.0" layoutY="326.0" prefHeight="26.0" prefWidth="180.0" text="Loading" textFill="WHITE">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <ProgressBar fx:id="progressBar" layoutX="386.0" layoutY="309.0" prefHeight="10.0" prefWidth="200.0" progress="0.0" />
+   </children>
+</AnchorPane>

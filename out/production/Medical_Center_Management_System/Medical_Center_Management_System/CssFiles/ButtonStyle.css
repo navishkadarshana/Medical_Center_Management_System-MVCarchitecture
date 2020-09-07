@@ -1,0 +1,10 @@
+.button:hover{
+    -fx-background-color: #3aaff1;
+    -fx-text-fill: #104171;
+}
+
+.SButton:hover{
+    -fx-background-color: #87CEEB;
+    -fx-text-fill: #3aaff1;
+
+}

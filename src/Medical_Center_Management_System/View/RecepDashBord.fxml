@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="700.0" prefWidth="1250.0" style="-fx-background-color: #ffffff;" stylesheets="@../CssFiles/ButtonStyle.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Medical_Center_Management_System.Controller.FXController.ResepDashBordController">
+   <children>
+      <VBox prefHeight="700.0" prefWidth="224.0" style="-fx-background-color: #104171;">
+         <children>
+            <JFXButton fx:id="ButtonDashbord" onAction="#handleClick" prefHeight="50.0" prefWidth="224.0" text="Dashboard    " textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/home.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <VBox.margin>
+                  <Insets top="137.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="ButtonDoctors" layoutX="10.0" layoutY="166.0" onAction="#handleClick" prefHeight="50.0" prefWidth="224.0" text="Doctors         " textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="29.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/doc.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="ButtonPatient" layoutX="10.0" layoutY="209.0" onAction="#handleClick" prefHeight="50.0" prefWidth="224.0" text="Patients           " textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/Pationt.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="ButtonEmployee" layoutX="10.0" layoutY="252.0" onAction="#handleClick" prefHeight="50.0" prefWidth="224.0" text="Emoloyees     " textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/icons8_management_60px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="ButtonAppoinment" layoutX="10.0" layoutY="297.0" onAction="#handleClick" prefHeight="50.0" prefWidth="224.0" text="Appointment" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/calendar.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="ButtonMedicine" layoutX="10.0" layoutY="340.0" onAction="#handleClick" prefHeight="50.0" prefWidth="224.0" text="Medicine      " textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/pill.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="ButtonTest" layoutX="10.0" layoutY="410.0" onAction="#handleClick" prefHeight="50.0" prefWidth="224.0" text="Test             " textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/microscope.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="ButtonSupplier" layoutX="10.0" layoutY="388.0" onAction="#handleClick" prefHeight="50.0" prefWidth="224.0" text="Supplier       " textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/supplier_100px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="ButtonPaypal" layoutX="10.0" layoutY="383.0" onAction="#handleClick" prefHeight="50.0" prefWidth="224.0" text="Payment      " textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/getCash.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="ButtonLogout" layoutX="10.0" layoutY="469.0" onAction="#ButtonLogOut" prefHeight="50.0" prefWidth="224.0" text="LogOut       " textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="31.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/logoutWhite.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+      <ImageView fitHeight="144.0" fitWidth="248.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/logo.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="Date" layoutX="224.0" prefHeight="140.0" prefWidth="1038.0" styleClass="head-background" stylesheets="@../CssFiles/DashBord2.css">
+         <children>
+            <ImageView fx:id="CloseButton" fitHeight="25.0" fitWidth="27.0" layoutX="1012.0" layoutY="1.0" onMouseClicked="#CloseDashBoard" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Image/Close4.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="LocationLable" layoutX="7.0" layoutY="70.0" prefHeight="27.0" prefWidth="347.0" text="Medical Center Management System/Dashboard" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="MainLable" layoutX="7.0" layoutY="99.0" prefHeight="36.0" prefWidth="224.0" text="Dashboard" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="TimeAndDate" layoutX="901.0" layoutY="102.0" prefHeight="31.0" prefWidth="137.0" text="Time &amp; Date" textFill="#104171">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="NowDate" layoutX="901.0" layoutY="35.0" prefHeight="27.0" prefWidth="137.0" text="Date" textFill="#104171">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="Day" layoutX="901.0" layoutY="70.0" prefHeight="27.0" prefWidth="137.0" text="Day" textFill="#104171">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="365.0" layoutY="-1.0" text="Receptionist Portal" textFill="WHITE">
+               <font>
+                  <Font name="Britannic Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <StackPane layoutX="224.0" layoutY="139.0">
+         <children>
+            <AnchorPane fx:id="EmoloyeeViewPane" layoutX="10.0" layoutY="10.0" prefHeight="559.0" prefWidth="1030.0" style="-fx-background-color: #ffffff;" styleClass="SButton">
+               <children>
+                  <TableView fx:id="TableViewEmployee" layoutX="30.0" layoutY="95.0" prefHeight="418.0" prefWidth="967.0" stylesheets="@../CssFiles/TableStayle.css">
+                     <columns>
+                        <TableColumn fx:id="EColid" prefWidth="65.0" text="ID" />
+                        <TableColumn fx:id="EColFname" prefWidth="84.0" text="First Name" />
+                        <TableColumn fx:id="EColLname" prefWidth="86.0" text="Last Name" />
+                        <TableColumn fx:id="EColNIC" prefWidth="88.0" text="NIC" />
+                        <TableColumn fx:id="EColAddress" prefWidth="107.0" text="Address" />
+                        <TableColumn fx:id="EColRole" prefWidth="102.0" text="Role" />
+                        <TableColumn fx:id="EColSalary" prefWidth="91.0" text="Salary" />
+                        <TableColumn fx:id="EColAGE" prefWidth="72.0" text="AGE" />
+                        <TableColumn fx:id="EColGender" prefWidth="77.0" text="Gender" />
+                        <TableColumn fx:id="EColDOB" prefWidth="95.0" text="DOB" />
+                        <TableColumn fx:id="EColPhoneNo" prefWidth="99.0" text="PhoneNo" />
+                     </columns>
+                  </TableView>
+                  <JFXTextField fx:id="SearchEmpolyee" labelFloat="true" layoutX="795.0" layoutY="49.0" prefHeight="25.0" prefWidth="202.0" promptText="Search Here" unFocusColor="#104171" />
+                  <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="761.0" layoutY="48.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/Serch.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="MedicineViewPane" layoutX="10.0" layoutY="10.0" prefHeight="559.0" prefWidth="1030.0" style="-fx-background-color: #ffffff;" styleClass="SButton">
+               <children>
+                  <TableView fx:id="TableViewMedicine" layoutX="20.0" layoutY="95.0" prefHeight="418.0" prefWidth="936.0" stylesheets="@../CssFiles/TableStayle.css">
+                     <columns>
+                        <TableColumn fx:id="McolRefNo" prefWidth="86.0" text="Ref No" />
+                        <TableColumn fx:id="McolSupID" prefWidth="73.0" text="SupplierID" />
+                        <TableColumn fx:id="Mcolname" prefWidth="113.0" text="Name" />
+                        <TableColumn fx:id="McolUnitprice" prefWidth="70.0" text="UnitPrice" />
+                        <TableColumn fx:id="McolSIdeEffect" prefWidth="118.0" text="Side effect" />
+                        <TableColumn fx:id="McolQunAc" prefWidth="94.0" text="Quntity_Ac" />
+                        <TableColumn fx:id="McolExpireDate" prefWidth="100.0" text="ExpirDate" />
+                        <TableColumn fx:id="McolDose" prefWidth="93.0" text="Dose" />
+                        <TableColumn fx:id="McolDaliyDose" prefWidth="89.0" text="DaliyDose" />
+                        <TableColumn fx:id="McolStorge" prefWidth="99.0" text="Storage" />
+                     </columns>
+                  </TableView>
+                  <JFXTextField fx:id="SearchMedicine" labelFloat="true" layoutX="754.0" layoutY="49.0" prefHeight="25.0" prefWidth="202.0" promptText="Search Here" unFocusColor="#104171" />
+                  <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="720.0" layoutY="48.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/Serch.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="SupplierViewPane" layoutX="10.0" layoutY="10.0" prefHeight="559.0" prefWidth="1030.0" style="-fx-background-color: #ffffff;" styleClass="SButton">
+               <children>
+                  <TableView fx:id="TableViewSupplier" layoutX="49.0" layoutY="98.0" onMouseClicked="#ShowOnClicks" prefHeight="384.0" prefWidth="501.0" stylesheets="@../CssFiles/TableStayle.css">
+                     <columns>
+                        <TableColumn fx:id="ScolSupID" prefWidth="74.0" text="SupplierID" />
+                        <TableColumn fx:id="Scolname" prefWidth="91.0" text="Name" />
+                        <TableColumn fx:id="ScolAddress" prefWidth="108.0" text="Address" />
+                        <TableColumn fx:id="ScolPhoneNo" prefWidth="121.0" text="Phone No" />
+                        <TableColumn fx:id="ScolCompaniName" prefWidth="106.0" text="Compani Name" />
+                     </columns>
+                  </TableView>
+                  <JFXTextField fx:id="SearchSupplier" labelFloat="true" layoutX="365.0" layoutY="49.0" prefHeight="25.0" prefWidth="185.0" promptText="Search Here" unFocusColor="#104171" />
+                  <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="338.0" layoutY="48.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/Serch.png" />
+                     </image>
+                  </ImageView>
+                  <ScrollPane layoutX="652.0" layoutY="123.0" prefHeight="356.0" prefWidth="311.0" vvalue="1.0">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="449.0" prefWidth="316.0">
+                           <children>
+                              <JFXTextField fx:id="StxtID" focusColor="#162a68" labelFloat="true" layoutX="43.0" layoutY="45.0" prefHeight="25.0" prefWidth="202.0" promptText="SupplierID" unFocusColor="BLACK">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="StxtName" focusColor="#12308a" layoutX="43.0" layoutY="131.0" prefHeight="25.0" prefWidth="202.0" promptText="Name" unFocusColor="BLACK" />
+                              <JFXTextField fx:id="StxtAddress" layoutX="43.0" layoutY="212.0" prefHeight="25.0" prefWidth="202.0" promptText="Address" unFocusColor="BLACK" />
+                              <JFXTextField fx:id="StxtPhoneno" layoutX="43.0" layoutY="301.0" prefHeight="25.0" prefWidth="202.0" promptText="Phone No" />
+                              <JFXTextField fx:id="StxtCompaniName" layoutX="43.0" layoutY="388.0" prefHeight="25.0" prefWidth="202.0" promptText="Compani Name" unFocusColor="BLACK" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+                  <AnchorPane layoutX="652.0" layoutY="98.0" prefHeight="25.0" prefWidth="311.0" styleClass="head2-background" stylesheets="@../CssFiles/DashBord2.css" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="TestViewPane" layoutX="10.0" layoutY="10.0" prefHeight="559.0" prefWidth="1030.0" style="-fx-background-color: #ffffff;" styleClass="SButton">
+               <children>
+                  <TableView fx:id="TableViewTest" layoutX="49.0" layoutY="98.0" onMouseClicked="#ShowOnClicks" prefHeight="384.0" prefWidth="445.0" stylesheets="@../CssFiles/TableStayle.css">
+                     <columns>
+                        <TableColumn fx:id="TcolID" prefWidth="101.0" text="Test ID" />
+                        <TableColumn fx:id="Tcolname" prefWidth="174.0" text="Name" />
+                        <TableColumn fx:id="TcolAmount" prefWidth="176.0" text="Amount" />
+                     </columns>
+                  </TableView>
+                  <JFXTextField fx:id="SearchTest" labelFloat="true" layoutX="309.0" layoutY="49.0" prefHeight="25.0" prefWidth="185.0" promptText="Search Here" unFocusColor="#104171" />
+                  <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="272.0" layoutY="48.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/Serch.png" />
+                     </image>
+                  </ImageView>
+                  <ScrollPane layoutX="652.0" layoutY="123.0" prefHeight="356.0" prefWidth="311.0">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="377.0" prefWidth="316.0">
+                           <children>
+                              <JFXTextField fx:id="TtxtID" focusColor="#162a68" labelFloat="true" layoutX="43.0" layoutY="47.0" prefHeight="25.0" prefWidth="202.0" promptText="Test ID" unFocusColor="BLACK">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="TtxtName" focusColor="#12308a" layoutX="43.0" layoutY="164.0" prefHeight="25.0" prefWidth="202.0" promptText="Name" unFocusColor="BLACK" />
+                              <JFXTextField fx:id="TtxtAmount" layoutX="43.0" layoutY="278.0" prefHeight="25.0" prefWidth="202.0" promptText="Amount" unFocusColor="BLACK" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <AnchorPane layoutX="652.0" layoutY="98.0" prefHeight="25.0" prefWidth="311.0" styleClass="head2-background" stylesheets="@../CssFiles/DashBord2.css" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="PatientUpdatePane" layoutX="10.0" layoutY="10.0" prefHeight="516.0" prefWidth="848.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <JFXTextField fx:id="PtxtID" labelFloat="true" layoutX="64.0" layoutY="99.0" prefHeight="25.0" prefWidth="185.0" promptText="Doctor ID" unFocusColor="BLACK" />
+                  <JFXComboBox fx:id="PcomboTile" labelFloat="true" layoutX="395.0" layoutY="99.0" prefHeight="25.0" prefWidth="185.0" promptText="Title" unFocusColor="BLACK" />
+                  <JFXTextField fx:id="PtxtFName" labelFloat="true" layoutX="64.0" layoutY="224.0" prefHeight="25.0" prefWidth="185.0" promptText="First Name" unFocusColor="BLACK" />
+                  <JFXTextField fx:id="PtxtSName" labelFloat="true" layoutX="395.0" layoutY="224.0" prefHeight="25.0" prefWidth="185.0" promptText="Secon Name" unFocusColor="BLACK" />
+                  <JFXTextField fx:id="PtxtNIC" labelFloat="true" layoutX="64.0" layoutY="337.0" prefHeight="25.0" prefWidth="185.0" promptText="NIC" unFocusColor="BLACK" />
+                  <JFXTextArea fx:id="PtxtAdddress1" labelFloat="true" layoutX="746.0" layoutY="198.0" prefHeight="53.0" prefWidth="185.0" promptText="Address" />
+                  <JFXTextField fx:id="PtxtAGE" labelFloat="true" layoutX="395.0" layoutY="337.0" prefHeight="25.0" prefWidth="185.0" promptText="AGE" unFocusColor="BLACK" />
+                  <JFXComboBox fx:id="PcomboGender" labelFloat="true" layoutX="746.0" layoutY="337.0" prefHeight="25.0" prefWidth="185.0" promptText="Gender" />
+                  <JFXTextField fx:id="PtxtPhoneno" labelFloat="true" layoutX="746.0" layoutY="99.0" prefHeight="25.0" prefWidth="185.0" promptText="Phone No" unFocusColor="BLACK" />
+                  <JFXComboBox fx:id="PcomboBloodgroup" labelFloat="true" layoutX="746.0" layoutY="438.0" prefHeight="25.0" prefWidth="185.0" promptText="Blood Group" />
+                  <JFXDatePicker fx:id="PdateDOB" defaultColor="BLACK" layoutX="64.0" layoutY="438.0" prefHeight="25.0" prefWidth="185.0" promptText="DOB" />
+                  <AnchorPane prefHeight="64.0" prefWidth="1038.0" styleClass="head2-background" stylesheets="@../CssFiles/DashBord2.css" />
+                  <StackPane layoutX="825.0" layoutY="509.0" prefHeight="36.0" prefWidth="106.0">
+                     <children>
+                        <JFXButton fx:id="updatePatientButton" alignment="CENTER" onMouseClicked="#UpdateButtons" prefHeight="33.0" prefWidth="106.0" style="-fx-background-color: #104171;" styleClass="SButton" text="Update" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/save.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="SavePatientButton" onMouseClicked="#SaveButtons" prefHeight="33.0" prefWidth="106.0" style="-fx-background-color: #104171;" styleClass="SButton" text="Save" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/save.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                  </StackPane>
+                  <JFXButton fx:id="PCanselButton" layoutX="693.0" layoutY="511.0" onMouseClicked="#CancelButton" prefHeight="33.0" prefWidth="106.0" style="-fx-background-color: #104171;" styleClass="SButton" text="Cancel" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/CloseIcon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXTextArea fx:id="PtxtDisease" labelFloat="true" layoutX="395.0" layoutY="412.0" prefHeight="53.0" prefWidth="185.0" promptText="Disease" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="PatientsViewPane" layoutX="10.0" layoutY="10.0" prefHeight="559.0" prefWidth="1030.0" style="-fx-background-color: #ffffff;" styleClass="SButton">
+               <children>
+                  <TableView fx:id="TableViewPatient" layoutX="14.0" layoutY="95.0" prefHeight="418.0" prefWidth="1016.0" stylesheets="@../CssFiles/TableStayle.css">
+                     <columns>
+                        <TableColumn fx:id="ColidP" prefWidth="55.000030517578125" text="ID" />
+                        <TableColumn fx:id="colTitelP" prefWidth="55.0" text="Title" />
+                        <TableColumn fx:id="ColFnameP" prefWidth="94.0" text="First Name" />
+                        <TableColumn fx:id="ColLnameP" prefWidth="81.0" text="Last Name" />
+                        <TableColumn fx:id="ColNICP" prefWidth="64.0" text="NIC" />
+                        <TableColumn fx:id="ColAddressP" prefWidth="92.0" text="Address" />
+                        <TableColumn fx:id="ColAGEP" prefWidth="44.0" text="AGE" />
+                        <TableColumn fx:id="ColGenderP" prefWidth="61.0" text="Gender" />
+                        <TableColumn fx:id="ColDOBP" prefWidth="78.0" text="DOB" />
+                        <TableColumn fx:id="ColPhoneNoP" prefWidth="87.0" text="PhoneNo" />
+                        <TableColumn fx:id="ColDiseseP" prefWidth="84.0" text="Disease" />
+                        <TableColumn fx:id="ColBloodGrupP" prefWidth="66.0" text="Blood Group" />
+                     </columns>
+                  </TableView>
+                  <JFXTextField fx:id="SearchPatient" labelFloat="true" layoutX="829.0" layoutY="49.0" prefHeight="25.0" prefWidth="192.0" promptText="Search Here" unFocusColor="#104171" />
+                  <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="795.0" layoutY="48.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/Serch.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="AddPatientButton" layoutX="14.0" layoutY="45.0" onMouseClicked="#AddDoctor" prefHeight="25.0" prefWidth="131.0" style="-fx-background-color: #104171;" styleClass="SButton" text="New Patient" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/addDoctor.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="PaymentViewPane" prefHeight="559.0" prefWidth="1038.0" style="-fx-background-color: #ffffff;" styleClass="SButton">
+               <children>
+                  <TableView fx:id="TableViewPayment" layoutX="28.0" layoutY="98.0" onMouseClicked="#ShowOnClicks" prefHeight="384.0" prefWidth="603.0" stylesheets="@../CssFiles/TableStayle.css">
+                     <columns>
+                        <TableColumn fx:id="PcolID" prefWidth="64.0" text="Billl No" />
+                        <TableColumn fx:id="PcolName" prefWidth="90.0" text="Patinet Name" />
+                        <TableColumn fx:id="Pcolcharge" prefWidth="96.0" text="Hospital Charges" />
+                        <TableColumn fx:id="PcolTname" prefWidth="93.0" text="Test Name" />
+                        <TableColumn fx:id="Pcoldate" prefWidth="83.0" text="Date" />
+                        <TableColumn fx:id="PcolTotal" prefWidth="74.0" text="Total" />
+                     </columns>
+                  </TableView>
+                  <JFXTextField fx:id="SearchPayments" labelFloat="true" layoutX="446.0" layoutY="51.0" prefHeight="25.0" prefWidth="185.0" promptText="Search Here" unFocusColor="#104171" />
+                  <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="412.0" layoutY="50.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/Serch.png" />
+                     </image>
+                  </ImageView>
+                  <ScrollPane hbarPolicy="NEVER" layoutX="652.0" layoutY="123.0" prefHeight="356.0" prefWidth="362.0" vvalue="0.99">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="489.0" prefWidth="348.0">
+                           <children>
+                              <JFXTextField fx:id="BtxtBillNo" focusColor="#162a68" labelFloat="true" layoutX="14.0" layoutY="21.0" prefHeight="29.0" prefWidth="185.0" promptText="Bill No" unFocusColor="BLACK">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="BtxtName" editable="false" labelFloat="true" layoutX="152.0" layoutY="92.0" prefHeight="25.0" prefWidth="166.0" promptText="PationName" unFocusColor="#9a9a9a" />
+                              <JFXTextField fx:id="BtxtPID" focusColor="#12308a" labelFloat="true" layoutX="14.0" layoutY="92.0" onAction="#EnterPID" prefHeight="25.0" prefWidth="81.0" promptText="Patient ID" unFocusColor="BLACK" />
+                              <JFXDatePicker fx:id="Btxtdate" defaultColor="#104171" layoutX="18.0" layoutY="382.0" prefHeight="25.0" prefWidth="185.0" promptText="Set Date" />
+                              <JFXTextField fx:id="BtxtTID" editable="false" focusColor="#12308a" labelFloat="true" layoutX="14.0" layoutY="310.0" onAction="#EnterTID" prefHeight="25.0" prefWidth="81.0" promptText="Test ID" unFocusColor="#7c7c7c" />
+                              <JFXComboBox fx:id="BcomTextName" layoutX="11.0" layoutY="238.0" onAction="#SelectText" prefHeight="25.0" prefWidth="157.0" promptText="selectTest" unFocusColor="BLACK" />
+                              <JFXTextField fx:id="BtxtTotal" focusColor="#12308a" labelFloat="true" layoutX="18.0" layoutY="450.0" onMouseClicked="#ClickTotal" prefHeight="25.0" prefWidth="150.0" promptText="Total Mount" unFocusColor="BLACK" />
+                              <JFXTextField fx:id="BtxtCharges" focusColor="#12308a" labelFloat="true" layoutX="14.0" layoutY="159.0" onAction="#EnterIDPID" prefHeight="25.0" prefWidth="150.0" promptText="Hospital Charges" unFocusColor="BLACK" />
+                              <JFXTextField fx:id="BtxtTAmount" editable="false" focusColor="#12308a" labelFloat="true" layoutX="164.0" layoutY="310.0" onAction="#EnterIDPID" prefHeight="25.0" prefWidth="162.0" promptText="Test Amount" unFocusColor="#7c7c7c" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <AnchorPane layoutX="652.0" layoutY="98.0" prefHeight="25.0" prefWidth="362.0" styleClass="head2-background" stylesheets="@../CssFiles/DashBord2.css" />
+                  <StackPane layoutX="908.0" layoutY="500.0" prefHeight="38.0" prefWidth="106.0">
+                     <children>
+                        <JFXButton fx:id="updatePaymentButton" onMouseClicked="#UpdateButtons" prefHeight="33.0" prefWidth="94.0" style="-fx-background-color: #104171;" styleClass="SButton" text="Update" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/save.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="SavePaymentButton" onMouseClicked="#SaveButtons" prefHeight="33.0" prefWidth="94.0" style="-fx-background-color: #104171;" styleClass="SButton" text="Save" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/save.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </StackPane>
+                  <JFXButton fx:id="BCanselButton" layoutX="786.0" layoutY="503.0" onMouseClicked="#CancelButton" prefHeight="33.0" prefWidth="94.0" style="-fx-background-color: #104171;" styleClass="SButton" text="Reset" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/Reset.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="DoctorViewPane" prefHeight="559.0" prefWidth="1030.0" style="-fx-background-color: #ffffff;" styleClass="SButton">
+               <children>
+                  <TableView fx:id="TableView" layoutX="43.0" layoutY="95.0" prefHeight="418.0" prefWidth="967.0" stylesheets="@../CssFiles/TableStayle.css">
+                    <columns>
+                      <TableColumn fx:id="ColID" prefWidth="75.0" text="ID" />
+                      <TableColumn fx:id="ColTitel" prefWidth="62.0" text="Title" />
+                        <TableColumn fx:id="ColFname" prefWidth="88.0" text="First Name" />
+                        <TableColumn fx:id="ColLname" prefWidth="84.0" text="Last Name" />
+                        <TableColumn fx:id="ColNIC" prefWidth="91.0" text="NIC" />
+                        <TableColumn fx:id="ColAddress" prefWidth="85.0" text="Address" />
+                        <TableColumn fx:id="ColAGE" prefWidth="86.0" text="AGE" />
+                        <TableColumn fx:id="ColGender" prefWidth="83.0" text="Gender" />
+                        <TableColumn fx:id="ColDOB" prefWidth="101.0" text="DOB" />
+                        <TableColumn fx:id="ColPhoneNo" prefWidth="108.0" text="PhoneNo" />
+                        <TableColumn fx:id="ColSpe" prefWidth="103.0" text="Specialtice" />
+                    </columns>
+                  </TableView>
+                  <JFXTextField fx:id="SearchDoctors" labelFloat="true" layoutX="809.0" layoutY="49.0" prefHeight="25.0" prefWidth="202.0" promptText="Search Here" unFocusColor="#104171" />
+                  <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="776.0" layoutY="48.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/Serch.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="AppoinmentViewPane" layoutX="10.0" layoutY="10.0" prefHeight="559.0" prefWidth="1030.0" style="-fx-background-color: #ffffff;" styleClass="SButton">
+               <children>
+                  <TableView fx:id="TableViewAppoinment" layoutX="20.0" layoutY="98.0" onMouseClicked="#ShowOnClicks" prefHeight="384.0" prefWidth="611.0" stylesheets="@../CssFiles/TableStayle.css">
+                     <columns>
+                        <TableColumn fx:id="AcolID" prefWidth="75.0" text="Appoinment_No" />
+                        <TableColumn fx:id="AcolDName" prefWidth="101.0" text="Doctor Name" />
+                        <TableColumn fx:id="AcolPname" prefWidth="109.0" text="Patient Name" />
+                        <TableColumn fx:id="AcolDate" prefWidth="107.0" text="Date" />
+                        <TableColumn fx:id="AcolTime" prefWidth="101.0" text="Time" />
+                     </columns>
+                  </TableView>
+                  <JFXTextField fx:id="SearchAppoinment" labelFloat="true" layoutX="446.0" layoutY="63.0" prefHeight="25.0" prefWidth="185.0" promptText="Search Here" unFocusColor="#104171" />
+                  <ImageView fitHeight="27.0" fitWidth="27.0" layoutX="412.0" layoutY="62.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/Serch.png" />
+                     </image>
+                  </ImageView>
+                  <ScrollPane hbarPolicy="NEVER" layoutX="652.0" layoutY="123.0" prefHeight="356.0" prefWidth="347.0" vvalue="0.11">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="425.0" prefWidth="348.0">
+                           <children>
+                              <JFXTextField fx:id="AtxtID" focusColor="#162a68" labelFloat="true" layoutX="14.0" layoutY="45.0" prefHeight="29.0" prefWidth="185.0" promptText="Appoinment No" unFocusColor="BLACK">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="AtxtDID" focusColor="#12308a" labelFloat="true" layoutX="14.0" layoutY="137.0" onAction="#EnterDID" prefHeight="25.0" prefWidth="86.0" promptText="DoctorID" unFocusColor="BLACK" />
+                              <JFXTextField fx:id="AtxtPname" editable="false" labelFloat="true" layoutX="133.0" layoutY="233.0" prefHeight="25.0" prefWidth="166.0" promptText="PationName" unFocusColor="#5e5d5d" />
+                              <JFXTextField fx:id="AtxtPID" focusColor="#12308a" labelFloat="true" layoutX="14.0" layoutY="233.0" onAction="#EnterIDPID" prefHeight="25.0" prefWidth="81.0" promptText="Patient ID" unFocusColor="BLACK" />
+                              <JFXDatePicker fx:id="AdateSetDate" defaultColor="#104171" layoutX="14.0" layoutY="316.0" prefHeight="25.0" prefWidth="185.0" promptText="Set Date" />
+                              <JFXComboBox fx:id="AcomTime" labelFloat="true" layoutX="21.0" layoutY="386.0" prefHeight="25.0" prefWidth="150.0" promptText="Select Time" unFocusColor="BLACK" />
+                              <JFXTextField fx:id="AtxtDname" editable="false" labelFloat="true" layoutX="136.0" layoutY="137.0" prefHeight="25.0" prefWidth="166.0" promptText="Doctor Name" unFocusColor="#656565" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <AnchorPane layoutX="652.0" layoutY="98.0" prefHeight="25.0" prefWidth="347.0" styleClass="head2-background" stylesheets="@../CssFiles/DashBord2.css" />
+                  <StackPane layoutX="844.0" layoutY="492.0" prefHeight="53.0" prefWidth="150.0">
+                     <children>
+                        <JFXButton fx:id="updateAppoinmentButton" onMouseClicked="#UpdateButtons" prefHeight="33.0" prefWidth="94.0" style="-fx-background-color: #104171;" styleClass="SButton" text="Update" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/save.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="SaveAppoinmentButton" onMouseClicked="#SaveButtons" prefHeight="33.0" prefWidth="94.0" style="-fx-background-color: #104171;" styleClass="SButton" text="Save" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/save.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </StackPane>
+                  <JFXButton fx:id="ACanselButton" layoutX="750.0" layoutY="502.0" onMouseClicked="#CancelButton" prefHeight="33.0" prefWidth="94.0" style="-fx-background-color: #104171;" styleClass="SButton" text="Reset" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="23.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Image/Reset.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="DashBordViewPane" layoutX="10.0" layoutY="10.0" prefHeight="559.0" prefWidth="1030.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <ImageView fitHeight="140.0" fitWidth="236.0" layoutX="24.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/Box11.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="140.0" fitWidth="236.0" layoutX="528.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/Box11.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="140.0" fitWidth="236.0" layoutX="272.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/Box11.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="140.0" fitWidth="236.0" layoutX="788.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/Box11.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="93.0" layoutY="51.0" prefHeight="38.0" prefWidth="131.0" text="Doctors" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="24.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/doctorIcon.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="38.0" fitWidth="46.0" layoutX="272.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/EmployeeBlue.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="788.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/SupplierBlue.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="36.0" fitWidth="61.0" layoutX="519.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/Employees.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="319.0" layoutY="51.0" prefHeight="38.0" prefWidth="143.0" text="Employees" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="593.0" layoutY="51.0" prefHeight="38.0" prefWidth="106.0" text="Patients" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="845.0" layoutY="51.0" prefHeight="38.0" prefWidth="122.0" text="Suppliers" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Doctorcount" layoutX="119.0" layoutY="89.0" text="20" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="EmployeeCount" layoutX="367.0" layoutY="89.0" text="20" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="PatientCount" layoutX="623.0" layoutY="89.0" text="20" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="SupplierCount" layoutX="883.0" layoutY="89.0" text="20" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="242.0" fitWidth="347.0" layoutX="691.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/doctores-png-5.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="459.0" layoutY="214.0" prefHeight="38.0" prefWidth="83.0" text="VISION">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="459.0" layoutY="242.0" prefHeight="38.0" prefWidth="422.0" text="To be the center of excellence in the helth care.">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="459.0" layoutY="280.0" prefHeight="38.0" prefWidth="83.0" text="MISSION">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="272.0" fitWidth="347.0" layoutX="450.0" layoutY="299.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Image/mission.png" />
+                     </image>
+                  </ImageView>
+                  <BarChart layoutX="-17.0" layoutY="212.0" prefHeight="341.0" prefWidth="462.0">
+                    <xAxis>
+                      <CategoryAxis label="Type" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis label="numbers" side="LEFT" />
+                    </yAxis>
+                  </BarChart>
+               </children></AnchorPane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

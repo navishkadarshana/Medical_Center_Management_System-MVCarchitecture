@@ -1,0 +1,4 @@
+.root{
+    -fx-background-image:url('../Image/LodingScreen.jpg') ;
+    -fx-background-size: cover;
+}
