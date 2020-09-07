@@ -15,13 +15,9 @@ My system is very user friendly and written in Java and MySQL. The owner and rec
 
 
 
-
-
-
-
 1. First import all the SQLsheet in your mysql server.
 
-2.then,import this library in your project
+2. then,import this library in your project
 
 	mysql-connector-java-5.1.49.jar
 	jfoenix.jar
@@ -31,7 +27,7 @@ My system is very user friendly and written in Java and MySQL. The owner and rec
 	fontawesomefx-fontawesome-4.7.0-5.jar
 	fxsampler-1.0.10.jar
 
-3.Now run project 
+3. Now run project 
 
 
 https://github.com/NavishkaD
