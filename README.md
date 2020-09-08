@@ -7,13 +7,12 @@ The purpose of my project entitled as “medical center MANAGEMENT SYSTEM” is 
 My system is very user friendly and written in Java and MySQL. The owner and receptionist can access the system. Owner has full access to the system he can do anything. For example, add, delete and edit doctors and employees. 
 
 
-• Technology Stack: Java 8, FX Library, MySQL,
-  IntelliJ IDEA and Scene Builder
 
-• Architectural Design: Model View Controller
-  Architecture
+# • Technology Stack: Java 8, FX Library, MySQL, IntelliJ IDEA and Scene Builder.
 
+# • Architectural Design: Model View Controller Architecture.
 
+#
 
 1. First import all the SQLsheet in your mysql server.
 
@@ -39,6 +38,12 @@ My system is very user friendly and written in Java and MySQL. The owner and rec
 #
 ![](Screenshot/Screenshot_4.jpg)
 
+
+Clone the Source Code from github..
+
+Hope someone finds this helpful someday...! 😉
+
+# Developed by Navishka Darshana ©-2020
 
 https://github.com/NavishkaD
 
