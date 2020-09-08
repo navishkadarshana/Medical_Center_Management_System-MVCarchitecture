@@ -29,6 +29,13 @@ My system is very user friendly and written in Java and MySQL. The owner and rec
 
 3. Now run project 
 
+# ScreenShot
+
+![](Screenshot/Screenshot_1.jpg)
+![](Screenshot/Screenshot_2.jpg)
+![](Screenshot/Screenshot_3.jpg)
+![](Screenshot/Screenshot_4.jpg)
+
 
 https://github.com/NavishkaD
 
