@@ -18,13 +18,13 @@ My system is very user friendly and written in Java and MySQL. The owner and rec
 
 2. then,import this library in your project
 
-	mysql-connector-java-5.1.49.jar
-	jfoenix.jar
-	controlsfx-8.40.13.jar
-	controlsfx-samples-8.40.13.jar
-	fontawesomefx-commons-8.15.jar
-	fontawesomefx-fontawesome-4.7.0-5.jar
-	fxsampler-1.0.10.jar
+	*mysql-connector-java-5.1.49.jar
+	*jfoenix.jar
+	*controlsfx-8.40.13.jar
+	*controlsfx-samples-8.40.13.jar
+	*fontawesomefx-commons-8.15.jar
+	*fontawesomefx-fontawesome-4.7.0-5.jar
+	*fxsampler-1.0.10.jar
 
 3. Now run project 
 
